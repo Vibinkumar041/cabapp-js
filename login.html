@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cabapp-login</title>
+</head>
+<body>
+	<h1>Log in</h1><br>
+	<form onsubmit="login()">
+		<label for ="mno">Enter the mobile number</label>
+		<input type="text" name="mno" id="mno" placeholder="mobile number" required autofocus><br/> 
+		<label for="password">Enter the password</label>
+		<input type="password"	name="password" id="pw" placeholder="password"><br/>
+		<button type="submit">login</button>
+	</form>
+			<script>
+			function login() {
+				event.preventDefault();
+				alert("log in button clicked");
+				let mobilenumber=document.querySelector("#mno").value;
+				alert("Mobilenumber"+mobilenumber);
+				let password=document.querySelector("#pw").value;
+				alert("password"+password); 
+				if(mobilenumber=="9659644868" && password=="vibin"){
+					alert("Log in success");
+					window.location.href="cabtype.html";
+					
+				}
+				else{
+					alert("Log in failed");
+				}
+			}
+			</script>
+</body>
+
+</html>

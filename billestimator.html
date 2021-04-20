@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>cabapp-bill estimation</title>
+</head>
+<body>
+	<h1>bill-estimator</h1>
+	<form onsubmit="billEstimator()">
+		<label1 for="cabtype">Enter the cabtype</label1>
+		<select name="cab" id="cab"required>
+			<option disabled>--types--</option>
+			<option value="micro">MICRO</option>
+			<option value="mini">MINI</option>
+			<option value="premium">PREMIUM</option>
+		</select></br>
+		<label for="km" >Enter the km</label>
+		<input type="number"name="km"id="km"placeholder="km"required></br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
+<script>
+		function billEstimator(){
+				event.preventDefault();
+				let km=document.querySelector("#km").value;
+				alert("km entered="+km);
+				let cab=document.querySelector("#cab").value;
+				alert("cab type="+cab);
+				switch(cab){
+					case "micro":{let price=10*km;alert("The price is="+price);break; }
+					case "mini":{let price=15*km;alert("The price is="+price);break;}
+					case "premium":{let price=20*km;alert("The price is="+price);break;}
+				}		
+				window.location.href="gst.html";
+			}
+</script>
